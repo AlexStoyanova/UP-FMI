@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(63): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(65): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(69): warning C4018: '<=': signed/unsigned mismatch
+c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(71): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Functions_2.vcxproj -> C:\Users\Alexandra\source\repos\Functions_2\Debug\Functions_2.exe

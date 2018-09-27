@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\functions\functions\main.cpp(7): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Functions.vcxproj -> C:\Users\Alexandra\source\repos\Functions\Debug\Functions.exe

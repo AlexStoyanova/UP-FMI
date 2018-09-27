@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\matrix\matrix\main.cpp(91): warning C4244: 'initializing': conversion from 'double' to 'unsigned int', possible loss of data
+  Matrix.vcxproj -> C:\Users\Alexandra\source\repos\Matrix\Debug\Matrix.exe

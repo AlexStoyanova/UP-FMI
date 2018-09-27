@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(5): error C2365: 'y1': redefinition; previous definition was 'function'
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\corecrt_math.h(984): note: see declaration of 'y1'
+c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(13): error C2446: '<=': no conversion from 'double (__cdecl *)(double)' to 'int'
+  c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(13): note: There is no context in which this conversion is possible
+c:\users\alexandra\source\repos\functions_2\functions_2\main.cpp(13): error C4996: 'y1': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _y1. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\corecrt_math.h(984): note: see declaration of 'y1'

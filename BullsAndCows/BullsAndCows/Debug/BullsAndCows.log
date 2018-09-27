@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\bullsandcows\bullsandcows\main.cpp(65): warning C4244: 'initializing': conversion from 'double' to 'unsigned int', possible loss of data
+c:\users\alexandra\source\repos\bullsandcows\bullsandcows\main.cpp(66): warning C4244: 'initializing': conversion from 'double' to 'unsigned int', possible loss of data
+c:\users\alexandra\source\repos\bullsandcows\bullsandcows\main.cpp(67): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  BullsAndCows.vcxproj -> C:\Users\Alexandra\source\repos\BullsAndCows\Debug\BullsAndCows.exe

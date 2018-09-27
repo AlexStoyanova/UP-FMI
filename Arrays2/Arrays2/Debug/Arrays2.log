@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\arrays2\arrays2\main.cpp(42): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\alexandra\source\repos\arrays2\arrays2\main.cpp(105): warning C4018: '<': signed/unsigned mismatch
+  Arrays2.vcxproj -> C:\Users\Alexandra\source\repos\Arrays2\Debug\Arrays2.exe

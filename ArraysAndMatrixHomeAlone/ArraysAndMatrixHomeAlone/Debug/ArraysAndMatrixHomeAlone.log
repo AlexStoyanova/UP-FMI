@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\arraysandmatrixhomealone\arraysandmatrixhomealone\main.cpp(43): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\alexandra\source\repos\arraysandmatrixhomealone\arraysandmatrixhomealone\main.cpp(106): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  ArraysAndMatrixHomeAlone.vcxproj -> C:\Users\Alexandra\source\repos\ArraysAndMatrixHomeAlone\Debug\ArraysAndMatrixHomeAlone.exe

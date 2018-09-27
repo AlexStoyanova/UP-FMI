@@ -1,0 +1,7 @@
+﻿  Source1.cpp
+c:\users\alexandra\source\repos\project4\project4\source1.cpp(10): error C2086: 'int c': redefinition
+  c:\users\alexandra\source\repos\project4\project4\source1.cpp(8): note: see declaration of 'c'
+c:\users\alexandra\source\repos\project4\project4\source1.cpp(11): error C2086: 'int a': redefinition
+  c:\users\alexandra\source\repos\project4\project4\source1.cpp(6): note: see declaration of 'a'
+c:\users\alexandra\source\repos\project4\project4\source1.cpp(12): error C2086: 'int b': redefinition
+  c:\users\alexandra\source\repos\project4\project4\source1.cpp(7): note: see declaration of 'b'

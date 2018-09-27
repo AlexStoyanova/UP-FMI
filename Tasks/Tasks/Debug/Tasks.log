@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\tasks\tasks\main.cpp(10): warning C4018: '<': signed/unsigned mismatch
+  Tasks.vcxproj -> C:\Users\Alexandra\source\repos\Tasks\Debug\Tasks.exe

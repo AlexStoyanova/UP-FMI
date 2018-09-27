@@ -1,0 +1,8 @@
+﻿  Source.cpp
+c:\users\alexandra\source\repos\project14\project14\source.cpp(9): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\project14\project14\source.cpp(11): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\project14\project14\source.cpp(20): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\project14\project14\source.cpp(22): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\project14\project14\source.cpp(33): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\project14\project14\source.cpp(35): warning C4018: '<': signed/unsigned mismatch
+  Project14.vcxproj -> C:\Users\Alexandra\source\repos\Project14\Debug\Project14.exe
