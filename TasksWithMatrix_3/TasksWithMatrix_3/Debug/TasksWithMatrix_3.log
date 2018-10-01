@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\taskswithmatrix_3\taskswithmatrix_3\main.cpp(34): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  TasksWithMatrix_3.vcxproj -> C:\Users\Alexandra\source\repos\TasksWithMatrix_3\Debug\TasksWithMatrix_3.exe
