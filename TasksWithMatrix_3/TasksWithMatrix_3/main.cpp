@@ -33,9 +33,7 @@ void printMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 void randomElementInMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 {
 	srand (time(NULL));
-	int randIndex_n = rand() % n;
-	int randIndex_m = rand() % m;
-	cout << matrix[randIndex_n][randIndex_m];
+	cout << matrix[rand() % n][rand() % m];
 }
 
 void printArray(int array[], size_t n)
