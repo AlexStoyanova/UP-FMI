@@ -32,7 +32,7 @@ void printMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 
 void randomElementInMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 {
-	srand (time(NULL));
+	srand ((unsigned int)time(NULL));
 	cout << matrix[rand() % n][rand() % m];
 }
 
@@ -47,7 +47,6 @@ void printArray(int array[], size_t n)
 void fromMatrixToArray(int matrix[][MAX_SIZE], size_t n, size_t m)
 {
 	int array[1024];
-	size_t size_of_array = n*m;
 	for (size_t i = 0; i < n; i++)
 	{
 		for (size_t j = 0; j < m; j++)
@@ -55,7 +54,7 @@ void fromMatrixToArray(int matrix[][MAX_SIZE], size_t n, size_t m)
 			array[i*m + j] = matrix[i][j];
 		}
 	}
-	printArray(array, size_of_array);
+	printArray(array, n*m);
 }
 
 bool isPrime(int number)
@@ -64,7 +63,7 @@ bool isPrime(int number)
 	{
 		return false;
 	}
-	int sqrtN = sqrt(number);
+	int sqrtN = (int)(sqrt(number));
 	for (int i = 2; i <= sqrtN; i++)
 	{
 		if (number%i == 0)
@@ -101,15 +100,15 @@ void sumPrimeNumbers(unsigned int number)
 int main()
 {
 
-	int matrix[MAX_SIZE][MAX_SIZE];
-	unsigned int n;
-	unsigned int m;
-	unsigned int number = isEven();
+	//int matrix[MAX_SIZE][MAX_SIZE];
+	//size_t n;
+	//size_t m; 
 	//cin >> n >> m;
 	//fillMatrix(matrix, n, m);
 	//printMatrix(matrix, n, m);
 	//randomElementInMatrix(matrix, n, m);
 	//fromMatrixToArray(matrix, n, m);
+	unsigned int number = isEven();
 	sumPrimeNumbers(number);
 	return 0;
 }

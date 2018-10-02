@@ -1,7 +1,2 @@
 ﻿  main.cpp
-c:\users\alexandra\source\repos\taskswithmatrix_3\taskswithmatrix_3\main.cpp(35): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\alexandra\source\repos\taskswithmatrix_3\taskswithmatrix_3\main.cpp(67): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-c:\users\alexandra\source\repos\taskswithmatrix_3\taskswithmatrix_3\main.cpp(106): warning C4101: 'm': unreferenced local variable
-c:\users\alexandra\source\repos\taskswithmatrix_3\taskswithmatrix_3\main.cpp(104): warning C4101: 'matrix': unreferenced local variable
-c:\users\alexandra\source\repos\taskswithmatrix_3\taskswithmatrix_3\main.cpp(105): warning C4101: 'n': unreferenced local variable
   TasksWithMatrix_3.vcxproj -> C:\Users\Alexandra\source\repos\TasksWithMatrix_3\Debug\TasksWithMatrix_3.exe
