@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <cmath>
 using namespace std;
 
 const int MAX_SIZE = 16;
@@ -59,19 +60,58 @@ void fromMatrixToArray(int matrix[][MAX_SIZE], size_t n, size_t m)
 	printArray(array, size_of_array);
 }
 
+bool isPrime(int number)
+{
+	if (number < 2)
+	{
+		return false;
+	}
+	int sqrtN = sqrt(number);
+	for (int i = 2; i <= sqrtN; i++)
+	{
+		if (number%i == 0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+unsigned int isEven()
+{
+	unsigned int number;
+	do
+	{
+		cin >> number;
+	} while (number % 2);
+	return number;
+}
+
+void sumPrimeNumbers(unsigned int number)
+{
+	size_t half_number = number / 2;
+	for (size_t i = 0; i <= half_number; i++)
+	{
+		if (isPrime(half_number + i) && isPrime(half_number - i) && ((half_number + i) + (half_number - i)))
+		{
+			cout << half_number + i << " + " << half_number - i << " = " << number << endl;
+		}
+	}
+
+}
+
 int main()
 {
 
 	int matrix[MAX_SIZE][MAX_SIZE];
 	unsigned int n;
 	unsigned int m;
-	cin >> n >> m;
-	fillMatrix(matrix, n, m);
-	printMatrix(matrix, n, m);
+	unsigned int number = isEven();
+	//cin >> n >> m;
+	//fillMatrix(matrix, n, m);
+	//printMatrix(matrix, n, m);
 	//randomElementInMatrix(matrix, n, m);
-	fromMatrixToArray(matrix, n, m);
-
-
-
+	//fromMatrixToArray(matrix, n, m);
+	sumPrimeNumbers(number);
 	return 0;
 }
