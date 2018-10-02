@@ -81,7 +81,7 @@ unsigned int isEven()
 	do
 	{
 		cin >> number;
-	} while (number % 2);
+	} while (number < 3 || number % 2);
 	return number;
 }
 
@@ -90,7 +90,7 @@ void sumPrimeNumbers(unsigned int number)
 	size_t half_number = number / 2;
 	for (size_t i = 0; i <= half_number; i++)
 	{
-		if (isPrime(half_number + i) && isPrime(half_number - i) && ((half_number + i) + (half_number - i)))
+		if (isPrime(half_number + i) && isPrime(half_number - i))
 		{
 			cout << half_number + i << " + " << half_number - i << " = " << number << endl;
 		}
