@@ -81,20 +81,64 @@ void spiralIterationOfMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 	}
 }
 
+void printArray(int array[], size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << array[i] << " ";
+	}
+}
+
+void fillArray(int array[], size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		cin >> array[i];
+	}
+}
+
+void newArray(int array[], size_t index1, size_t index2)
+{
+	int array_2[MAX_SIZE];
+	size_t j = 0;
+	if (index1 > index2)
+	{
+		cout << "Invalid" << endl;
+	}
+	else
+	{
+		for (size_t i = index1; i <= index2; i++)
+		{
+			array_2[j] = array[i];
+			j++;
+		}
+	}
+	int size = j++;
+	printArray(array_2, size);
+}
+
 int main()
 {
 	/*unsigned int number;
 	cin >> number;
 	cout << Oiler(number) << endl;*/
-	int matrix[MAX_SIZE][MAX_SIZE];
+	/*int matrix[MAX_SIZE][MAX_SIZE];
 	unsigned int n;
 	unsigned int m;
 	cin >> n >> m;
 	randMatrix(matrix, n, m);
 	printMatrix(matrix, n, m);
 	cout << endl;
-	spiralIterationOfMatrix(matrix, n, m);
-
+	spiralIterationOfMatrix(matrix, n, m);*/
+	int array[MAX_SIZE];
+	unsigned int size;
+	cin >> size;
+	fillArray(array, size);
+	printArray(array, size);
+	unsigned int index_1;
+	unsigned int index_2;
+	cin >> index_1 >> index_2;
+	newArray(array, index_1, index_2);
 
 
 
