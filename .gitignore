@@ -1,6 +1,6 @@
 # Prerequisites
 *.d
-
+.vs
 # Compiled Object files
 *.slo
 *.lo
@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# SQL Server files
+*.mdf
+*.ldf

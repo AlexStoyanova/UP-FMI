@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\alexandra\up-fmi\project3\project3\main.cpp(52): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Project3.vcxproj -> C:\Users\Alexandra\UP-FMI\Project3\Debug\Project3.exe
