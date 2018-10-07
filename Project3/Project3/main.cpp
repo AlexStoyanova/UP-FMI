@@ -49,7 +49,7 @@ void printMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 
 void randMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 	for (size_t i = 0; i < n; i++)
 	{
 		for (size_t j = 0; j < m; j++)
@@ -113,7 +113,7 @@ void newArray(int array[], size_t index1, size_t index2)
 			j++;
 		}
 	}
-	int size = j++;
+	int size = index2 - index1 + 1;
 	printArray(array_2, size);
 }
 
