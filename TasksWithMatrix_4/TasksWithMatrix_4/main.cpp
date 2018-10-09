@@ -14,7 +14,7 @@ void fillMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 	}
 }
 
-void adressOfCellsInMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
+void addressOfCellsInMatrix(int matrix[][MAX_SIZE], size_t n, size_t m)
 {
 	for (size_t i = 0; i < n; i++)
 	{
@@ -34,7 +34,16 @@ void fillArray(int array[], size_t size)
 	}
 }
 
-void adressOfCellsInArray(int array[], size_t size)
+void printArray(int array[], size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+}
+
+void addressOfCellsInArray(int array[], size_t size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -42,14 +51,265 @@ void adressOfCellsInArray(int array[], size_t size)
 	}
 }
 
+void swap(int &a,int &b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+void insertionSort(int array[], size_t size)
+{
+	for (size_t i = 0; i < size - 1; i++)
+	{
+		for (size_t j = i; j < size; j++)
+		{
+			if (array[i] > array[j])
+			{
+				swap(array[i], array[j]);
+			}
+		}
+	}
+}
+
+void cutOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
+{
+	int array_C[MAX_SIZE];
+	size_t k = 0;
+	for (size_t i = 0; i < size_A; i++)
+	{
+		for (size_t j = 0; j < size_B; j++)
+		{
+			if (array_A[i] == array_B[j])
+			{
+				array_C[k] = array_A[i];
+				k++;
+			}
+		}
+	}
+	insertionSort(array_C, k);
+	printArray(array_C, k);
+}
+
+void unionOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
+{
+	int array_C[MAX_SIZE];
+	size_t k = 0;
+	bool outArray = true;
+	for (size_t i = 0; i < size_A; i++)
+	{
+		array_C[k] = array_A[i];
+		k++;
+	}
+	for (size_t m = 0; m < size_B; m++)
+	{
+		for (size_t j = 0; j < size_A; j++)
+		{
+			if (array_B[m] == array_A[j])
+			{
+				outArray = false;
+			}
+		}
+		if (outArray)
+		{
+			array_C[k] = array_B[m];
+			k++;
+		}
+		outArray = true;
+	}
+	insertionSort(array_C, k);
+	printArray(array_C, k);
+}
+
+void subtractionOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
+{
+	int array_C[MAX_SIZE];
+	size_t k = 0;
+	bool outArray = true;
+	for (size_t i = 0; i < size_A; i++)
+	{
+		for (size_t j = 0; j < size_B; j++)
+		{
+			if (array_A[i] == array_B[j])
+			{
+				outArray = false;
+			}
+		}
+		if (outArray)
+		{
+			array_C[k] = array_A[i];
+			k++;
+		}
+		outArray = true;
+	}
+	insertionSort(array_C, k);
+	printArray(array_C, k);
+}
+
+void xorOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
+{
+	int array_C[MAX_SIZE];
+	size_t k = 0;
+	bool outArray = true;
+	for (size_t i = 0; i < size_A; i++)
+	{
+		for (size_t j = 0; j < size_B; j++)
+		{
+			if (array_A[i] == array_B[j])
+			{
+				outArray = false;
+			}
+		}
+		if (outArray)
+		{
+			array_C[k] = array_A[i];
+			k++;
+		}
+		outArray = true;
+	}
+	for (size_t j = 0; j < size_B; j++)
+	{
+		for (size_t i = 0; i < size_A; i++)
+		{
+			if (array_B[j] == array_A[i])
+			{
+				outArray = false;
+			}
+		}
+		if (outArray)
+		{
+			array_C[k] = array_B[j];
+			k++;
+		}
+		outArray = true;
+	}
+	insertionSort(array_C, k);
+	printArray(array_C, k);
+}
+
+void rotationInLeft(int array[], size_t size)
+{
+	int firstValue = array[0];
+	for (size_t i = 0; i < size; i++)
+	{
+		array[i] = array[i + 1];
+	}
+	array[size - 1] = firstValue;
+	printArray(array, size);
+}
+
+void rotationInRight(int array[], size_t size)
+{
+	int lastValue = array[size - 1];
+	for (int i = size - 1; i >= 0; i--)
+	{
+		array[i] = array[i - 1];
+	}
+	array[0] = lastValue;
+	printArray(array, size);
+}
+
 int main()
 {
-	int array[MAX_SIZE];
+	//Address in each cell in array
+
+	/*int array[MAX_SIZE];
 	unsigned int n;
+	cout << "Enter size of array: " << endl;
+	cin >> n;
+	cout << "Fill cells of array with integer numbers: " << endl;
+	fillArray(array, n);
+	addressOfCellsInArray(array, n);*/
+
+	//Address in each cell in matrix
+
+	/*int matrix[MAX_SIZE][MAX_SIZE];
+	unsigned int n, m;
+	cout << "Enter size of rows and cols of matrix: " << endl;
+	cin >> n >> m;
+	cout << "Fill cells of matrix with integer numbers: " << endl;
+	fillMatrix(matrix, n, m);
+	addressOfCellsInMatrix(matrix, n, m);*/
+
+	//Cut of arrays
+
+	/*int array[MAX_SIZE];
+	int array2[MAX_SIZE];
+	unsigned int n, m;
+	cout << "Enter size of first array and second array: " << endl;
+	cin >> n >> m;
+	cout << "Fill cells of arrays with integer numbers: " << endl;
+	fillArray(array, n);
+	fillArray(array2, m);
+	cutOfArrays(array, array2, n, m);*/
+
+	//Union of arrays
+
+	/*int array[MAX_SIZE];
+	int array2[MAX_SIZE];
+	unsigned int n, m;
+	cout << "Enter size of first array and second array: " << endl;
+	cin >> n >> m;
+	cout << "Fill cells of arrays with integer numbers: " << endl;
+	fillArray(array, n);
+	fillArray(array2, m);
+	unionOfArrays(array, array2, n, m);*/
+
+	//Substraction of arrays
+
+	/*int array[MAX_SIZE];
+	int array2[MAX_SIZE];
+	unsigned int n, m;
+	cout << "Enter size of first array and second array: " << endl;
+	cin >> n >> m;
+	cout << "Fill cells of arrays with integer numbers: " << endl;
+	fillArray(array, n);
+	fillArray(array2, m);
+	subtractionOfArrays(array, array2, n, m);*/
+	
+	//Xor of arrays
+
+	/*int array[MAX_SIZE];
+	int array2[MAX_SIZE];
+	unsigned int n, m;
+	cout << "Enter size of first array and second array: " << endl;
+	cin >> n >> m;
+	cout << "Fill cells of arrays with integer numbers: " << endl;
+	fillArray(array, n);
+	fillArray(array2, m);
+	xorOfArrays(array, array2, n, m);*/
+	
+	//Rotation arrays in left and in right
+
+	/*int array[MAX_SIZE];
+	unsigned int n;
+	int rotation;
+	cout << "Enter size of array: " << endl;
 	cin >> n;
 	fillArray(array, n);
-	adressOfCellsInArray(array, n);
+	cout << "Enter number of rotations: " << endl;
+	cin >> rotation;
+	if (rotation == 0 || rotation == n || rotation%n == 0)
+	{
+		printArray(array, n);
+	}
+	else if (rotation > 0)
+	{
+		while (rotation != 0 && rotation%n)
+		{
+			rotationInRight(array, n);
+			rotation--;
+		}
+	}
+	else
+	{
+		int absValue = abs(rotation) % n;
+		while (rotation != 0 && absValue)
+		{
+			rotationInLeft(array, n);
+			rotation++;
 
-
+		}
+	}*/
 	return 0;
 }
