@@ -60,14 +60,11 @@ void swap(int &a,int &b)
 
 void insertionSort(int array[], size_t size)
 {
-	for (size_t i = 0; i < size - 1; i++)
+	for (size_t i = 1; i < size; i++)
 	{
-		for (size_t j = i; j < size; j++)
+		for (size_t j = i; j > 0 && array[j] < array[j - 1]; j--)
 		{
-			if (array[i] > array[j])
-			{
-				swap(array[i], array[j]);
-			}
+				swap(array[j], array[j-1]);
 		}
 	}
 }
@@ -86,36 +83,6 @@ void cutOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
 				k++;
 			}
 		}
-	}
-	insertionSort(array_C, k);
-	printArray(array_C, k);
-}
-
-void unionOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
-{
-	int array_C[MAX_SIZE];
-	size_t k = 0;
-	bool outArray = true;
-	for (size_t i = 0; i < size_A; i++)
-	{
-		array_C[k] = array_A[i];
-		k++;
-	}
-	for (size_t m = 0; m < size_B; m++)
-	{
-		for (size_t j = 0; j < size_A; j++)
-		{
-			if (array_B[m] == array_A[j])
-			{
-				outArray = false;
-			}
-		}
-		if (outArray)
-		{
-			array_C[k] = array_B[m];
-			k++;
-		}
-		outArray = true;
 	}
 	insertionSort(array_C, k);
 	printArray(array_C, k);
@@ -146,9 +113,39 @@ void subtractionOfArrays(int array_A[], int array_B[], size_t size_A, size_t siz
 	printArray(array_C, k);
 }
 
+void unionOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
+{
+	int array_C[MAX_SIZE*2];
+	size_t k = 0;
+	bool outArray = true;
+	for (size_t i = 0; i < size_A; i++)
+	{
+		array_C[k] = array_A[i];
+		k++;
+	}
+	for (size_t m = 0; m < size_B; m++)
+	{
+		for (size_t j = 0; j < size_A; j++)
+		{
+			if (array_B[m] == array_A[j])
+			{
+				outArray = false;
+			}
+		}
+		if (outArray)
+		{
+			array_C[k] = array_B[m];
+			k++;
+		}
+		outArray = true;
+	}
+	insertionSort(array_C, k);
+	printArray(array_C, k);
+}
+
 void xorOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
 {
-	int array_C[MAX_SIZE];
+	int array_C[MAX_SIZE*2];
 	size_t k = 0;
 	bool outArray = true;
 	for (size_t i = 0; i < size_A; i++)
@@ -245,7 +242,7 @@ int main()
 
 	//Union of arrays
 
-	/*int array[MAX_SIZE];
+	int array[MAX_SIZE];
 	int array2[MAX_SIZE];
 	unsigned int n, m;
 	cout << "Enter size of first array and second array: " << endl;
@@ -253,7 +250,7 @@ int main()
 	cout << "Fill cells of arrays with integer numbers: " << endl;
 	fillArray(array, n);
 	fillArray(array2, m);
-	unionOfArrays(array, array2, n, m);*/
+	unionOfArrays(array, array2, n, m);
 
 	//Substraction of arrays
 
