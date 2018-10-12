@@ -88,7 +88,7 @@ void cutOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
 	printArray(array_C, k);
 }
 
-void subtractionOfArrays(int array_A[], int array_B[],int array_C[], size_t size_A, size_t size_B, size_t k)
+void subtractionOfArrays(int array_A[], int array_B[],int array_C[], size_t size_A, size_t size_B, size_t& k)
 {
 	bool outArray = true;
 	for (size_t i = 0; i < size_A; i++)
@@ -108,7 +108,6 @@ void subtractionOfArrays(int array_A[], int array_B[],int array_C[], size_t size
 		outArray = true;
 	}
 	insertionSort(array_C, k);
-	printArray(array_C, k);
 }
 
 void unionOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
@@ -121,30 +120,16 @@ void unionOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
 		k++;
 	}
 	subtractionOfArrays(array_B, array_A, array_C, size_B, size_A, k);
+	printArray(array_C, k);
 }
 
 void xorOfArrays(int array_A[], int array_B[], size_t size_A, size_t size_B)
 {
 	int array_C[MAX_SIZE*2];
 	size_t k = 0;
-	bool outArray = true;
-	for (size_t i = 0; i < size_A; i++)
-	{
-		for (size_t j = 0; j < size_B; j++)
-		{
-			if (array_A[i] == array_B[j])
-			{
-				outArray = false;
-			}
-		}
-		if (outArray)
-		{
-			array_C[k] = array_A[i];
-			k++;
-		}
-		outArray = true;
-	}
+	subtractionOfArrays(array_A, array_B, array_C, size_A, size_B, k);
 	subtractionOfArrays(array_B, array_A, array_C, size_B, size_A, k);
+	printArray(array_C, k);
 }
 
 
@@ -228,7 +213,9 @@ int main()
 	cout << "Fill cells of arrays with integer numbers: " << endl;
 	fillArray(array, n);
 	fillArray(array2, m);
-	subtractionOfArrays(array, array2, array3, n, m, k);*/
+	subtractionOfArrays(array, array2, array3, n, m, k);
+	printArray(array3, k);*/
+	
 	
 	//Xor of arrays
 
