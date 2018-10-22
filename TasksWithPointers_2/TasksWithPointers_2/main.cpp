@@ -59,6 +59,22 @@ void pushBack(int *&arr, size_t &size, int number)
 	}
 }
 
+void pushFront(int *&arr, size_t &size, int number)
+{
+	int *new_arr = new int[size + 1];
+	if (new_arr != nullptr)
+	{
+		for (size_t i = 0; i < size; i++)
+		{
+			new_arr[i + 1] = arr[i];
+		}
+		new_arr[0] = number;
+		delete[] arr;
+		size++;
+		arr = new_arr;
+	}
+}
+
 int main()
 {
 	unsigned int n;
@@ -74,7 +90,7 @@ int main()
 	{
 		return 0;
 	}
-	pushBack(array, n, 8);
+	pushFront(array, n, 8);
 	pushBack(array, n, 37);
 	printArray(array, n);
 
