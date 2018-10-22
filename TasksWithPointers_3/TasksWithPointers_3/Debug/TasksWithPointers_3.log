@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\alexandra\up-fmi\taskswithpointers_3\taskswithpointers_3\main.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  TasksWithPointers_3.vcxproj -> C:\Users\Alexandra\UP-FMI\TasksWithPointers_3\Debug\TasksWithPointers_3.exe
