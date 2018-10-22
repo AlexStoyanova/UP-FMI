@@ -61,7 +61,7 @@ void pushBack(int *&arr, size_t &size, int number)
 
 void pushFront(int *&arr, size_t &size, int number)
 {
-	int *new_arr = new int[size + 1];
+	int *new_arr = new(nothrow) int[size + 1];
 	if (new_arr != nullptr)
 	{
 		for (size_t i = 0; i < size; i++)
@@ -71,6 +71,26 @@ void pushFront(int *&arr, size_t &size, int number)
 		new_arr[0] = number;
 		delete[] arr;
 		size++;
+		arr = new_arr;
+	}
+}
+
+void insertAt(int *&arr, size_t &size, int number, unsigned int index)
+{
+	int *new_arr = new(nothrow) int[size + 1];
+	if (new_arr != nullptr)
+	{
+		for (size_t i = 0; i < index; i++)
+		{
+			new_arr[i] = arr[i];
+		}
+		new_arr[index] = number;
+		for (size_t j = index; j <= size; j++)
+		{
+			new_arr[j+1] = arr[j];
+		}
+		size++;
+		delete[] arr;
 		arr = new_arr;
 	}
 }
@@ -92,6 +112,7 @@ int main()
 	}
 	pushFront(array, n, 8);
 	pushBack(array, n, 37);
+	insertAt(array, n, 42, 3);
 	printArray(array, n);
 
 	delete[] array;
