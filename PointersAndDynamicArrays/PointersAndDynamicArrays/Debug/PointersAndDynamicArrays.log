@@ -1,3 +1,4 @@
 ﻿  main.cpp
-c:\users\alexandra\up-fmi\pointersanddynamicarrays\pointersanddynamicarrays\main.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\alexandra\up-fmi\pointersanddynamicarrays\pointersanddynamicarrays\main.cpp(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\alexandra\up-fmi\pointersanddynamicarrays\pointersanddynamicarrays\main.cpp(105): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   PointersAndDynamicArrays.vcxproj -> C:\Users\Alexandra\UP-FMI\PointersAndDynamicArrays\Debug\PointersAndDynamicArrays.exe

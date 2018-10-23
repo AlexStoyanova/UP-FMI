@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>
+#include <cmath>
 using namespace std;
 
 void fillRandArray(int *array, size_t size)
@@ -79,14 +80,52 @@ void newArrays(int *array, size_t size)
 	delete[] new_array2;
 }
 
+void printDoubleArray(double *array, size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << array[i] << ' ';
+	}
+	cout << endl;
+}
+
+void fillDoubleArray(double *array, size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		cin >> array[i];
+	}
+}
+
+int* roundDoubleToIntArrays(double *array, size_t size)
+{
+	int *new_array = new(nothrow) int[size];
+	for (size_t i = 0; i < size; i++)
+	{
+		new_array[i] = floor(array[i]);
+	}
+	return new_array;
+}
+
 int main()
 {
-	unsigned int n;
+	/*unsigned int n;
 	cin >> n;
 	int *array = new(nothrow) int[n];
 	fillRandArray(array, n);
 	printArray(array, n);
 	newArrays(array, n);
+	delete[] array;*/
+
+	unsigned int n;
+	cin >> n;
+	double *array = new(nothrow) double[n];
+	fillDoubleArray(array, n);
+	int *new_array = roundDoubleToIntArrays(array, n);
+	printArray(new_array, n);
+	delete[] new_array;
 	delete[] array;
+
+
 	return 0;
 }
