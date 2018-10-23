@@ -3,7 +3,7 @@
 #include <time.h>
 using namespace std;
 
-void fillRandArray(unsigned int *array, size_t size)
+void fillRandArray(int *array, size_t size)
 {
 	srand(time(NULL));
 	for (size_t i = 0; i < size; i++)
@@ -11,7 +11,7 @@ void fillRandArray(unsigned int *array, size_t size)
 		array[i] = rand() % 899 + 100;
 	}
 }
-void printArray(unsigned int *array, size_t size)
+void printArray(int *array, size_t size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -31,17 +31,54 @@ void allOddNumbers(unsigned int *array, size_t size, unsigned int k, unsigned in
 	}
 }
 
+void swap(int &a, int &b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+void sortArray(int *array, size_t size)
+{
+	for (size_t i = 0; i < size - 1; i++)
+	{
+		for (size_t j = i + 1; j < size; j++)
+		{
+			if (array[i] > array[j])
+			{
+				swap(array[i], array[j]);
+			}
+		}
+	}
+}
+
+int posNumber(int *array, size_t size, unsigned int k)
+{
+	size_t i = 0;
+	size_t count = 0;
+	sortArray(array, size);
+	while(count != k)
+	{
+		if (array[i] != array[i + 1])
+		{
+			count++;
+		}
+		i++;
+	}
+	return array[i - 1];
+}
 
 int main()
 {
-	unsigned int n;
-	cin >> n;
-	unsigned int k, m;
-	cin >> k >> m;
-	unsigned int *array = new(nothrow) unsigned int[n];
+	unsigned int n, k;
+	cin >> n >> k;
+	//unsigned int k, m;
+	//cin >> k >> m;
+	int *array = new(nothrow) int[n];
 	fillRandArray(array, n);
+	cout << posNumber(array, n, k) << endl;
 	printArray(array, n);
-	allOddNumbers(array, n, k, m);
+	//allOddNumbers(array, n, k, m);
 
 
 
