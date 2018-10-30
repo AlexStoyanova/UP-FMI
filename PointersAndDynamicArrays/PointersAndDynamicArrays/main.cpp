@@ -107,6 +107,26 @@ int* roundDoubleToIntArrays(double *array, size_t size)
 	return new_array;
 }
 
+void printCharArray(char *array, size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << array[i] << ' ';
+	}
+	cout << endl;
+}
+
+void fillArrayWithAlphabet(char *array, size_t size)
+{
+	size_t j = 0;
+	for (size_t i = 97; i < 123; i++)
+	{
+		array[j] = i;
+		j++;
+	}
+	array[size-1] = '\0';
+}
+
 int main()
 {
 	/*unsigned int n;
@@ -117,15 +137,21 @@ int main()
 	newArrays(array, n);
 	delete[] array;*/
 
-	unsigned int n;
+	/*unsigned int n;
 	cin >> n;
 	double *array = new(nothrow) double[n];
 	fillDoubleArray(array, n);
 	int *new_array = roundDoubleToIntArrays(array, n);
 	printArray(new_array, n);
 	delete[] new_array;
-	delete[] array;
+	delete[] array;*/
 
-
+	char *array = new(nothrow) char[27];
+	if (array != nullptr)
+	{
+		fillArrayWithAlphabet(array, 27);
+		printCharArray(array, 26);
+		delete[] array;
+	}
 	return 0;
 }
