@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\tasksfrompracticum_2\tasksfrompracticum_2\main.cpp(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\tasksfrompracticum_2\tasksfrompracticum_2\main.cpp(203): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\tasksfrompracticum_2\tasksfrompracticum_2\main.cpp(205): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\tasksfrompracticum_2\tasksfrompracticum_2\main.cpp(210): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\tasksfrompracticum_2\tasksfrompracticum_2\main.cpp(212): warning C4018: '<': signed/unsigned mismatch
+  TasksFromPracticum_2.vcxproj -> C:\Users\Alexandra\source\repos\TasksFromPracticum_2\Debug\TasksFromPracticum_2.exe
