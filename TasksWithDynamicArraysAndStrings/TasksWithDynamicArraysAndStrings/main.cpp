@@ -1,8 +1,17 @@
 #include <iostream>
 
-bool isAlpha(char ch)
+bool isLittleAlpha(char ch)
 {
-	if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+	if (ch >= 'a' && ch <= 'z')
+	{
+		return true;
+	}
+	return false;
+}
+
+bool isUpperAlpha(char ch)
+{
+	if (ch >= 'A' && ch <= 'Z')
 	{
 		return true;
 	}
@@ -21,33 +30,32 @@ bool isDig(char ch)
 
 int main()
 {
-	/*
+	
 	char ch;
 	std::cin >> ch;
-	if (ch >= 'A' && ch <= 'Z')
+	if (isUpperAlpha(ch))
 	{
 		std::cout << char(ch + 32);
 	}
-	else if (ch >= 'a' && ch <= 'z')
+	else if (isLittleAlpha(ch))
 	{
 		std::cout << char(ch - 32);
 	}
+	else if (isDig(ch))
+	{
+		unsigned int digit = ch - '0';
+		std::cout << digit << std::endl;
+	}
 	else
 	{
-		std::cout << "Not a letter!" << std::endl;
+		std::cout << "Not a letter and not a number between 0 and 9!" << std::endl;
 	}
-	*/
 	
-	/*
-	char ch;
-	std::cin >> ch;
-	if (ch >= '0' && ch <= '9')
-	{
-		std::cout << (int)ch << std::endl;
-	}
-	*/
+	
+	
 
 
+	
 
 
 	return 0;
