@@ -1,42 +1,21 @@
 #include <iostream>
 using namespace std;
 
-size_t m_strlen(const char *str) 
-{
-	size_t len = 0;
-	for (; str[len] != '\0'; len++);
-	return len;
-}
-
-
 int m_strcmp(const char *str1, const char *str2)
 {
-	unsigned int len1 = m_strlen(str1);
-	unsigned int len2 = m_strlen(str2);
-	if (len1 > len2)
-	{
-		return (int)(str1[len2] - str2[len2]);
-	}
-	if (len1 < len2) {
-		return (int)(str1[len1] - str2[len1]);
-	}
 	unsigned int i = 0;
-	while (str1[i] != '\0')
+	while (str1[i] != '\0' && str1[i] == str2[i])
 	{
-		if (str1[i] != str2[i])
-		{
-			return (int)(str1[i] - str2[i]);
-		}
 		i++;
 	}
-	return 0;
+	return (int)(str1[i] - str2[i]);
 }
 
 int main()
 {
 	const int SIZE = 50;
 	char name[SIZE];
-	char *str[] = { "Petar Beron","Vasil Levski","Ivan Vazov","Zahari Stoyanov","Petko Slaveikov" };
+	const char *str[] = { "Petar Beron","Vasil Levski","Ivan Vazov","Zahari Stoyanov","Petko Slaveikov" };
 	cout << "Enter name: " << endl;
 	cin.getline(name, SIZE);
 	bool isName = false;
