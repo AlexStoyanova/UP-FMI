@@ -44,14 +44,15 @@ char *m_strcpy(char* destination, const char* source)
 
 int m_strcmp(const char* str1, const char* str2)
 {
-	if (m_strlen(str1) > m_strlen(str2))
+	unsigned int len1 = m_strlen(str1);
+	unsigned int len2 = m_strlen(str2);
+	if (len1 > len2)
 	{
-		return (int)(str1[m_strlen(str2)] - str2[m_strlen(str2)]);
+		return (int)(str1[len2] - str2[len2]);
 	}
-	if (m_strlen(str1) < m_strlen(str2)) {
-		return (int)(str1[m_strlen(str1)] - str2[m_strlen(str1)]);
+	if (len1 < len2) {
+		return (int)(str1[len1] - str2[len1]);
 	}
-
 	unsigned int i = 0;
 	while (str1[i] != '\0')
 	{
