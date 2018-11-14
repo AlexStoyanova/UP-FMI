@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	const int SIZE = 10;
-	char words[SIZE][SIZE + 1] = { "ali", "duma", "shokolad", "torta", "qgoda", "lista", "kalinka", "rozovo", "sladur", "slunce"};
+	char words[SIZE][SIZE] = { "ali", "duma", "shokolad", "torta", "qgoda", "lista", "kalinka", "rozovo", "sladur", "slunce"};
 	char letter;
 	cout << "Enter a letter: " << endl;
 	cin >> letter;
