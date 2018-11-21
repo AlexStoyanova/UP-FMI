@@ -180,8 +180,7 @@ int main()
 			carry = 1;
 		}
 	}
-	size_t digits = max(log10(number1), log10(number2)) + 1;
-	printArrayReverse(num1,digits);
+	printArrayReverse(num1,SIZE);
 
 
 	return 0;
