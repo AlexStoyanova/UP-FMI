@@ -45,8 +45,7 @@ int main()
 	unsigned int sum = 0;
 	for (int i = a; i <= b; i++)
 	{
-		sum = sumDigitsInNumber(i);
-		if (isPrime(i) && isPrime(sum))
+		if (isPrime(i) && isPrime(sumDigitsInNumber(i)))
 		{
 			cout << i << ' ';
 		}
@@ -67,7 +66,7 @@ int main()
 		}
 	}
 	int temp = n*n;
-	int *buff = new(nothrow) int[temp + 1];
+	int *buff = new(nothrow) int[temp];
 	for (int i = 0; i < temp; i++)
 	{
 		buff[i] = 0;
@@ -76,13 +75,13 @@ int main()
 	{
 		for (int j = 0; j < n; j++)
 		{
-			buff[matrix[i][j] + 1]++;
+			buff[matrix[i][j] - 1]++;
 		}
 	}
 	bool isSudoku = true;
-	for (int i = 1; i <= temp; i++)
+	for (int i = 0; i < temp; i++)
 	{
-		if (i == 0)
+		if (buff[i] == 0)
 		{
 			isSudoku = false;
 		}
@@ -96,5 +95,10 @@ int main()
 		cout << "Is NOT a su-do-ku!" << endl;
 	}
 	delete[] buff;
+
+
+
+
+
 	return 0;
 }
