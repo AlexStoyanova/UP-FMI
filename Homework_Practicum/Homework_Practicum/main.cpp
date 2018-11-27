@@ -37,6 +37,27 @@ void fillArray(int array[], size_t size)
 	}
 }
 
+void swap(int &a, int &b)
+{
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+void insertionSort(int array[], size_t size)
+{
+	for (int i = 1; i < size; i++)
+	{
+		for (int j = i; j >=0; j--)
+		{
+			if (array[j] < array[j - 1])
+			{
+				swap(array[j], array[j - 1]);
+			}
+		}
+	}
+}
+
 int main()
 {
 	/*unsigned int a, b;
@@ -104,7 +125,7 @@ int main()
 	}
 	delete[] buff;*/
 
-	const int SIZE = 100;
+	/*const int SIZE = 100;
 	unsigned int N, M;
 	int A[SIZE];
 	int B[SIZE];
@@ -133,7 +154,61 @@ int main()
 			}
 		}
 	}
-	cout << count << endl;
+	cout << count << endl;*/
+
+	const int SIZE = 100;
+	unsigned int N, M;
+	int A[SIZE];
+	int B[SIZE];
+	cout << "Enter N: ";
+	cin >> N;
+	cout << "Enter array A: " << endl;
+	fillArray(A, N);
+	cout << "Enter M: ";
+	cin >> M;
+	cout << "Enter array B: " << endl;
+	fillArray(B, M);
+	bool isUnic = true;
+	unsigned int count = 0;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+		{
+			if (A[i] == B[j])
+			{
+				count++;
+				break;
+			}
+		}
+	}
+	if (count == N)
+	{
+		count = 0;
+		for (int i = 0; i < M; i++)
+		{
+			for (int j = 0; j < N; j++)
+			{
+				if (B[i] == A[j])
+				{
+					count++;
+					break;
+				}
+			}
+		}
+		if (count == M)
+		{
+			cout << "YES! " << endl;
+		}
+		else
+		{
+			cout << "NO! " << endl;
+		}
+	}
+	else
+	{
+		cout << "NO! " << endl;
+	}
+
 
 	return 0;
 }
