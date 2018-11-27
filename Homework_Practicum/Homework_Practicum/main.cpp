@@ -29,6 +29,14 @@ unsigned int sumDigitsInNumber(unsigned int number)
 	return sum;
 }
 
+void fillArray(int array[], size_t size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cin >> array[i];
+	}
+}
+
 int main()
 {
 	/*unsigned int a, b;
@@ -51,7 +59,7 @@ int main()
 		}
 	}*/
 
-	const int SIZE = 100;
+	/*const int SIZE = 100;
 	unsigned int n;
 	do
 	{
@@ -94,11 +102,38 @@ int main()
 	{
 		cout << "Is NOT a su-do-ku!" << endl;
 	}
-	delete[] buff;
+	delete[] buff;*/
 
-
-
-
+	const int SIZE = 100;
+	unsigned int N, M;
+	int A[SIZE];
+	int B[SIZE];
+	do
+	{
+		cout << "Enter N: ";
+		cin >> N;
+	} while (N <= 0 || N >= 100);
+	cout << "Enter array A: " << endl;
+	fillArray(A, N);
+	do
+	{
+		cout << "Enter M: ";
+		cin >> M;
+	} while (M <= 0 || M >= 100);
+	cout << "Enter array B: " << endl;
+	fillArray(B, M);
+	unsigned int count = 0;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = i + 1; j < M; j++)
+		{
+			if (A[i] == B[j])
+			{
+				count++;
+			}
+		}
+	}
+	cout << count << endl;
 
 	return 0;
 }
