@@ -58,6 +58,27 @@ void insertionSort(int array[], size_t size)
 	}
 }
 
+bool isSubset(int array1[], int array2[], size_t size1, size_t size2)
+{
+	unsigned int count = 0;
+	for (int i = 0; i < size1; i++)
+	{
+		for (int j = 0; j < size2; j++)
+		{
+			if (array1[i] == array2[j])
+			{
+				count++;
+				break;
+			}
+		}
+	}
+	if (count == size1)
+	{
+		return true;
+	}
+	return false;
+}
+
 int main()
 {
 	/*unsigned int a, b;
@@ -168,47 +189,15 @@ int main()
 	cin >> M;
 	cout << "Enter array B: " << endl;
 	fillArray(B, M);
-	bool isUnic = true;
-	unsigned int count = 0;
-	for (int i = 0; i < N; i++)
+	if (isSubset(A, B, N, M) && isSubset(B, A, M, N))
 	{
-		for (int j = 0; j < M; j++)
-		{
-			if (A[i] == B[j])
-			{
-				count++;
-				break;
-			}
-		}
-	}
-	if (count == N)
-	{
-		count = 0;
-		for (int i = 0; i < M; i++)
-		{
-			for (int j = 0; j < N; j++)
-			{
-				if (B[i] == A[j])
-				{
-					count++;
-					break;
-				}
-			}
-		}
-		if (count == M)
-		{
-			cout << "YES! " << endl;
-		}
-		else
-		{
-			cout << "NO! " << endl;
-		}
+		cout << "YES!" << endl;
 	}
 	else
 	{
-		cout << "NO! " << endl;
+		cout << "NO!" << endl;
 	}
-
+	
 
 	return 0;
 }
