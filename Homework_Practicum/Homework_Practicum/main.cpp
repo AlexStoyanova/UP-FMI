@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+const int MAX_SIZE = 100;
+
 bool isPrime(unsigned int number)
 {
 	if (number < 2)
@@ -31,9 +33,20 @@ unsigned int sumDigitsInNumber(unsigned int number)
 
 void fillArray(int array[], size_t size)
 {
-	for (int i = 0; i < size; i++)
+	for (size_t i = 0; i < size; i++)
 	{
 		cin >> array[i];
+	}
+}
+
+void fillMatrix(int matrix[][MAX_SIZE], size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		for (size_t j = 0; j < size; j++)
+		{
+			cin >> *(*(matrix + i) + j);
+		}
 	}
 }
 
@@ -46,7 +59,7 @@ void swap(int &a, int &b)
 
 void insertionSort(int array[], size_t size)
 {
-	for (int i = 1; i < size; i++)
+	for (size_t i = 1; i < size; i++)
 	{
 		for (int j = i; j >=0; j--)
 		{
@@ -61,9 +74,9 @@ void insertionSort(int array[], size_t size)
 bool isSubset(int array1[], int array2[], size_t size1, size_t size2)
 {
 	unsigned int count = 0;
-	for (int i = 0; i < size1; i++)
+	for (size_t i = 0; i < size1; i++)
 	{
-		for (int j = 0; j < size2; j++)
+		for (size_t j = 0; j < size2; j++)
 		{
 			if (array1[i] == array2[j])
 			{
@@ -81,6 +94,7 @@ bool isSubset(int array1[], int array2[], size_t size1, size_t size2)
 
 int main()
 {
+	//1.
 	/*unsigned int a, b;
 	do
 	{
@@ -101,6 +115,7 @@ int main()
 		}
 	}*/
 
+	//2.
 	/*const int SIZE = 100;
 	unsigned int n;
 	do
@@ -146,6 +161,7 @@ int main()
 	}
 	delete[] buff;*/
 
+	//3.
 	/*const int SIZE = 100;
 	unsigned int N, M;
 	int A[SIZE];
@@ -177,7 +193,8 @@ int main()
 	}
 	cout << count << endl;*/
 
-	const int SIZE = 100;
+	//4.
+	/*const int SIZE = 100;
 	unsigned int N, M;
 	int A[SIZE];
 	int B[SIZE];
@@ -196,8 +213,43 @@ int main()
 	else
 	{
 		cout << "NO!" << endl;
-	}
+	}*/
 	
+	//6.
+	/*const int SIZE = 100;
+	unsigned int N;
+	do
+	{
+		cout << "Enter N: ";
+		cin >> N;
+	} while (N <= 0 || N >= 100);
+	int A[SIZE][SIZE];
+	int B[SIZE][SIZE];
+	cout << "Enter matrix A: " << endl;
+	fillMatrix(A, N);
+	cout << "Enter matrix B: " << endl;
+	fillMatrix(B, N);
+	int C[SIZE][SIZE] = { 0, };
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			for (int k = 0; k < N; k++)
+			{
+				*(*(C + i) + j) += (*(*(A + i) + k) * *(*(B + k) + j));
+			}
+		}
+	}
+	cout << "The new matrix is: " << endl;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			cout << *(*(C + i) + j) << ' ';
+		}
+		cout << endl;
+	}*/
+
 
 	return 0;
 }
