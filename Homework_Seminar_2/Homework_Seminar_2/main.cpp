@@ -2,7 +2,6 @@
 using namespace std;
 
 const int MAX_SIZE = 100;
-unsigned int i = 0;
 unsigned int start = 0;
 
 int positionLetter(char *str, char letter, size_t n)
@@ -13,9 +12,9 @@ int positionLetter(char *str, char letter, size_t n)
 	}
 	if (str[start] == letter)
 	{
-		i++;
+		n--;
 	}
-	if (i == n)
+	if (n == 0)
 	{
 		return start;
 	}
