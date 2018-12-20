@@ -18,8 +18,7 @@ int positionLetter(const char *str, char letter, size_t n, size_t start = 0)
 	{
 		return start;
 	}
-	start++;
-	return positionLetter(str, letter, n, start);
+	return positionLetter(str, letter, n, start + 1);
 }
 
 //1.
@@ -34,17 +33,16 @@ size_t m_strlen(const char *str)
 	return len;
 }
 
-bool isPalindrom(const char *str)
+bool isPalindrom(const char *str, size_t size)
 {
 	if (str == nullptr)
 	{
 		return false;
 	}
-	unsigned int len = m_strlen(str);
-	unsigned int temp = len / 2;
+	unsigned int temp = size / 2;
 	for (int i = 0; i < temp; i++)
 	{
-		if (str[i] != str[len - i - 1])
+		if (str[i] != str[size - i - 1])
 		{
 			return false;
 		}
@@ -83,13 +81,19 @@ char mostCommonLetter(const char *str)
 	return letter;
 }
 
-void bigFunction(char str[][MAX_SIZE], size_t n, char(*f)(const char* str), bool(*f2)(const char *str), size_t(*f3)(const char *str))
+typedef char(*mostComLetter)(const char *str);
+typedef bool(*isPalind)(const char *str, size_t size);
+typedef size_t(*myStrlen)(const char *str);
+
+void mostCommonLetterInEvenPalindrom(char str[][MAX_SIZE], size_t n, mostComLetter mstCmL, isPalind palindrom, myStrlen len)
 {
+	size_t size;
 	for (int i = 0; i < n; i++)
 	{
-		if (f2(str[i]) && (f3(str[i]) % 2 == 0))
+		size = len(str[i]);
+		if ((size % 2 == 0) && palindrom(str[i], size))
 		{
-			cout << f(str[i]) << ' ';
+			cout << mstCmL(str[i]) << ' ';
 		}
 	}
 }
@@ -119,7 +123,7 @@ int main()
 	{
 		cin >> str[i];
 	}
-	bigFunction(str, n, mostCommonLetter, isPalindrom, m_strlen);
+	mostCommonLetterInEvenPalindrom(str, n, mostCommonLetter, isPalindrom, m_strlen);
 
 	return 0;
 }
