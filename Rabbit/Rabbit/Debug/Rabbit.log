@@ -1,0 +1,10 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(6): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(16): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(18): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(33): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(41): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(45): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(49): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\rabbit\rabbit\main.cpp(51): warning C4018: '<': signed/unsigned mismatch
+  Rabbit.vcxproj -> C:\Users\Alexandra\source\repos\Rabbit\Debug\Rabbit.exe
