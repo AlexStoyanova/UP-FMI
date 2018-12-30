@@ -1,2 +1,5 @@
 ﻿  main.cpp
+c:\users\alexandra\source\repos\homework_seminar_2\homework_seminar_2\main.cpp(43): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\homework_seminar_2\homework_seminar_2\main.cpp(91): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\homework_seminar_2\homework_seminar_2\main.cpp(122): warning C4018: '<': signed/unsigned mismatch
   Homework_Seminar_2.vcxproj -> C:\Users\Alexandra\source\repos\Homework_Seminar_2\Debug\Homework_Seminar_2.exe

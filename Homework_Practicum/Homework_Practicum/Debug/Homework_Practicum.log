@@ -1,6 +1,2 @@
 ﻿  main.cpp
-c:\users\alexandra\source\repos\homework_practicum\homework_practicum\main.cpp(62): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexandra\source\repos\homework_practicum\homework_practicum\main.cpp(64): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexandra\source\repos\homework_practicum\homework_practicum\main.cpp(75): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexandra\source\repos\homework_practicum\homework_practicum\main.cpp(77): warning C4018: '<': signed/unsigned mismatch
   Homework_Practicum.vcxproj -> C:\Users\Alexandra\source\repos\Homework_Practicum\Debug\Homework_Practicum.exe
