@@ -36,27 +36,32 @@ int main()
 			if (matrix[i] == nullptr)
 			{
 				clear(matrix, i);
+				return -1;
 			}
 		}
-		for (int i = 0; i < m; i++)
-		{
-			matrix[0][i] = 1;
-		}
-		for (int i = 0; i < n; i++)
-		{
-			matrix[i][0] = 1;
-		}
-		for (int i = 1; i < n; i++)
-		{
-			for (int j = 1; j < m; j++)
-			{
-				matrix[i][j] = matrix[i][j - 1] + matrix[i - 1][j];
-			}
-		}
-		printMatrix(matrix, n, m);
-		clear(matrix, n);
 	}
-	
+	else
+	{
+		return -1;
+	}
 
+	for (int i = 0; i < m; i++)
+	{
+		matrix[0][i] = 1;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		matrix[i][0] = 1;
+	}
+	for (int i = 1; i < n; i++)
+	{
+		for (int j = 1; j < m; j++)
+		{
+			matrix[i][j] = matrix[i][j - 1] + matrix[i - 1][j];
+		}
+	}
+	printMatrix(matrix, n, m);
+	
+	clear(matrix, n);
 	return 0;
 }
