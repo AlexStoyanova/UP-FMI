@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\alexandra\source\repos\extrataskswithrecursion\extrataskswithrecursion\main.cpp(25): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\extrataskswithrecursion\extrataskswithrecursion\main.cpp(51): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\extrataskswithrecursion\extrataskswithrecursion\main.cpp(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\extrataskswithrecursion\extrataskswithrecursion\main.cpp(151): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\extrataskswithrecursion\extrataskswithrecursion\main.cpp(194): warning C4018: '<': signed/unsigned mismatch
+  ExtraTasksWithRecursion.vcxproj -> C:\Users\Alexandra\source\repos\ExtraTasksWithRecursion\Debug\ExtraTasksWithRecursion.exe
