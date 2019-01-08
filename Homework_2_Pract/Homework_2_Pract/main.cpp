@@ -1,12 +1,16 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 const int SIZE = 100;
 
+int m_max(int a, int b)
+{
+	return (a > b) ? a : b;
+}
+
 bool isValid(int X, int Y, size_t n)
 {
-	if (X < 0 || Y < 0 || X >(n - 1) || Y >(n - 1))
+	if (X < 0 || Y < 0 || X > (n - 1) || Y > (n - 1))
 	{
 		return false;
 	}
@@ -20,8 +24,8 @@ int waterInSquare(int matrix[][SIZE], size_t n, size_t X, size_t Y, int counter 
 		return counter - 1;
 	}
 	matrix[X][Y] = 0;
-	return max(max(waterInSquare(matrix, n, X + 1, Y, counter + 1), waterInSquare(matrix, n, X, Y - 1, counter + 1)),
-		max(waterInSquare(matrix, n, X, Y + 1, counter + 1), waterInSquare(matrix, n, X - 1, Y, counter + 1)));
+	return m_max(m_max(waterInSquare(matrix, n, X + 1, Y, counter + 1), waterInSquare(matrix, n, X, Y - 1, counter + 1)),
+		m_max(waterInSquare(matrix, n, X, Y + 1, counter + 1), waterInSquare(matrix, n, X - 1, Y, counter + 1)));
 }
 
 int main()
@@ -37,7 +41,7 @@ int main()
 			cin >> matrix[i][j];
 		}
 	}
-	unsigned int time = waterInSquare(matrix, n, X, Y);
+	int time = waterInSquare(matrix, n, X, Y);
 	bool isFine = true;
 	for (int i = 0; i < n; i++)
 	{

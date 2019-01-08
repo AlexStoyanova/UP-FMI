@@ -1,7 +1,7 @@
 ﻿  main.cpp
-c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(9): warning C4018: '>': signed/unsigned mismatch
-c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(33): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(35): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(42): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(13): warning C4018: '>': signed/unsigned mismatch
+c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(37): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(39): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(46): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexandra\source\repos\homework_2_pract\homework_2_pract\main.cpp(48): warning C4018: '<': signed/unsigned mismatch
   Homework_2_Pract.vcxproj -> C:\Users\Alexandra\source\repos\Homework_2_Pract\Debug\Homework_2_Pract.exe
