@@ -21,7 +21,7 @@ bool isInNum(int number, int k)
 	return false;
 }
 
-int* filter(int *arr, size_t size, bool(*ptrEven)(int), bool(*ptrIsIn)(int, int), size_t &len)
+int* filter(int *arr, size_t size, size_t boys, size_t girls, bool(*ptrEven)(int), bool(*ptrIsIn)(int, int), size_t &len)
 {
 	unsigned int count = 0;
 	for (int i = 0; i < size; i++)
@@ -32,16 +32,36 @@ int* filter(int *arr, size_t size, bool(*ptrEven)(int), bool(*ptrIsIn)(int, int)
 		}
 	}
 	len = size - count;
-	int *newArr = new(nothrow) int[len];
+	int *newArr;
+	if (len < (boys + girls))
+	{
+		newArr = new(nothrow) int[len];
+	}
+	else
+	{
+		len = boys + girls;
+		newArr = new(nothrow) int[len];
+	}
 	if (newArr != nullptr)
 	{
 		unsigned int j = 0;
-		for (int i = 0; i < size; i++)
+		for (int i = 0; i < size && j < len; i++)
 		{
-			if (!ptrIsIn(arr[i], 81))
+			if (!ptrIsIn(arr[i], 81) && ptrIsIn(arr[i], 42))
 			{
 				newArr[j] = arr[i];
 				j++;
+			}
+		}
+		if (j < len)
+		{
+			for (int i = 0; i < size && j < len; i++)
+			{
+				if (!ptrIsIn(arr[i], 81) && (!ptrIsIn(arr[i], 42)))
+				{
+					newArr[j] = arr[i];
+					j++;
+				}
 			}
 		}
 	}
@@ -60,7 +80,7 @@ int main()
 		cin >> array[i];
 	}
 	unsigned int len = 0;
-	int *ptr = filter(array, n, isEven, isInNum, len);
+	int *ptr = filter(array, n, boys, girls, isEven, isInNum, len);
 	unsigned int giftsForGirls = 0;
 	unsigned int giftsForBoys = 0;
 	for (int i = 0; i < len; i++)
