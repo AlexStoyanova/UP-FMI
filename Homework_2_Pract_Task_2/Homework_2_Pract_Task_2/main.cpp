@@ -32,16 +32,7 @@ int* filter(int *arr, size_t size, size_t boys, size_t girls, bool(*ptrEven)(int
 		}
 	}
 	len = size - count;
-	int *newArr;
-	if (len < (boys + girls))
-	{
-		newArr = new(nothrow) int[len];
-	}
-	else
-	{
-		len = boys + girls;
-		newArr = new(nothrow) int[len];
-	}
+	int *newArr = new(nothrow) int[len];
 	if (newArr != nullptr)
 	{
 		unsigned int j = 0;
